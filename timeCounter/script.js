@@ -1,4 +1,4 @@
-const endDate = new Date("24 Mar, 2025 22:35:00").getTime();
+const endDate = new Date("1 July, 2027 22:35:00").getTime();
 const startDate = new Date().getTime();
 
 
