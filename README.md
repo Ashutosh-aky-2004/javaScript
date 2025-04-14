@@ -2,4 +2,5 @@ Welcome to my JavaScript project repository! 🌟 Here, you'll find a collection
 
 This repository serves as a showcase of my journey as a JavaScript beginner. As I continue to learn and experiment, I will keep updating this page with new projects and ideas. Whether you're a fellow beginner, a mentor, or just a curious visitor, I hope you'll find something interesting here!
 
+<a href = "https://ashutosh-aky-2004.github.io/javaScript/calculator">Calculator</a><br>
 <a href = "https://ashutosh-aky-2004.github.io/javaScript/password%20Generator">Password Generator</a>
