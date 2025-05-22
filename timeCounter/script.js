@@ -1,5 +1,5 @@
 const endDate = new Date("1 July, 2027 22:35:00").getTime();
-const startDate = new Date().getTime();
+const startDate = new Date("1 April 2025 22:35:00").getTime();
 
 
 
