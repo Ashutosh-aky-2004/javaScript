@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Dark Mode Support -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <style>
+      #itemDescripton:focus {
+        outline: none;
+      }
+      #amount:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300 dark:bg-gradient-to-br dark:from-pink-300 dark:via-[#1c2b2d] dark:to-amber-300 text-black dark:text-white min-h-screen flex items-center justify-center p-4"
+  >
+    <!-- Colorful Border Wrapper -->
+    <div
+      class="m-4 p-1 rounded-xl max-w-xl w-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 shadow-lg"
+    >
+      <!-- Inner Content -->
+      <div
+        class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md transition-all duration-500"
+      >
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-2">
+          <h1 class="text-2xl font-bold">Expense Tracker</h1>
+          <button id="themeToggle" class="text-2xl transition-all duration-300">
+            🌙
+          </button>
+        </div>
+
+        <hr class="my-2 border-gray-300 dark:border-gray-600" />
+
+        <!-- Balance -->
+        <div class="text-lg font-semibold my-2" id="balance">
+          Balance: <span class="text-green-500">₹0.00</span>
+        </div>
+
+        <!-- Income & Expense -->
+        <div class="flex justify-between my-4 gap-4">
+          <div class="flex-1 p-4 bg-gray-100 dark:bg-gray-700 rounded-md">
+            <strong>Income:</strong>
+            <span id="incomeAmount" class="text-green-500">₹0.00</span>
+          </div>
+          <div class="flex-1 p-4 bg-gray-100 dark:bg-gray-700 rounded-md">
+            <strong>Expense:</strong>
+            <span id="expenseAmount" class="text-green-500">₹0.00</span>
+          </div>
+        </div>
+        <hr class="my-2 border-gray-300 dark:border-gray-600" />
+
+        <!-- Transaction History -->
+        <h2 class="text-xl font-semibold mt-6 text-center">
+          Transaction History
+        </h2>
+        <div id="transitionHistory"></div>
+        <hr class="my-2 border-gray-300 dark:border-gray-600" />
+
+        <!-- Add Transaction -->
+        <h2 class="text-xl font-semibold mt-6 text-center">Add Transaction</h2>
+        <form class="space-y-4 mt-2">
+          <div>
+            <label>Description:</label>
+            <input
+              type="text"
+              class="w-full p-2 border border-pink-400 rounded bg-gray-100 dark:bg-gray-700 dark:text-white"
+              placeholder="Enter description"
+              id="itemDescripton"
+            />
+          </div>
+          <div>
+            <label>Amount:</label>
+            <input
+              type="number"
+              class="w-full p-2 border border-pink-400 rounded bg-gray-100 dark:bg-gray-700 dark:text-white"
+              placeholder="Enter amount"
+              id="amount"
+            />
+          </div>
+          <div>
+            <label>Type:</label>
+            <div class="flex gap-4">
+              <label
+                ><input type="radio" name="type" value="Credit" checked />
+                <span class="text-pink-600">Credit</span></label
+              >
+              <label
+                ><input type="radio" name="type" value="Debit" />
+                <span class="text-pink-600">Debit</span></label
+              >
+            </div>
+          </div>
+          <button
+            type="submit"
+            id="addBtn"
+            class="px-4 py-2 border border-pink-400 text-pink-600 rounded hover:bg-pink-50 dark:hover:bg-gray-700 transition"
+          >
+            Add Button
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
