@@ -7,5 +7,5 @@ This repository serves as a showcase of my journey as a JavaScript beginner. As 
 <a href = "https://ashutosh-aky-2004.github.io/javaScript/calculator">Calculator</a><br>
 <a href = "https://ashutosh-aky-2004.github.io/javaScript/Myntra%20Clone">Myntra Clone</a><br>
 <a href = "https://ashutosh-aky-2004.github.io/javaScript/timeCounter">Time Counter</a><br>
-<a href = "https://ashutosh-aky-2004.github.io/javaScript/password%20Generator">Password Generator</a>
-<a href = "https://ashutosh-aky-2004.github.io/javaScript/stopWatch">Stop Watch</a>
+<a href = "https://ashutosh-aky-2004.github.io/javaScript/password%20Generator">Password Generator</a><br>
+<a href = "https://ashutosh-aky-2004.github.io/javaScript/stopWatch">Stop Watch</a><br>
