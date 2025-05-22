@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900">
+    <div
+      class="h-auto w-[30%] bg-black mx-auto mt-60 text-white rounded-2xl p-4"
+    >
+      <div class="text-center text-4xl mb-2 font-bold" style="color: #72ff14">
+        Stop Watch
+      </div>
+      <hr class="mb-4" />
+      <div id="display" class="text-center text-2xl mb-2">
+        00 : 00 : 00 : 000
+      </div>
+      <div class="gap-5 flex justify-center">
+        <button
+          id="start"
+          class="border-[2px] p-2 rounded-2xl w-24 font-bold bg-[green]"
+        >
+          <i class="fas fa-play mr-2"></i> Start
+        </button>
+        <button
+          id="stop"
+          class="border-[2px] p-2 rounded-2xl w-24 font-bold bg-[red]"
+        >
+          <i class="fas fa-stop mr-2"></i> Stop
+        </button>
+        <button
+          id="reset"
+          class="border-[2px] p-2 rounded-2xl w-24 font-bold bg-[blueviolet]"
+        >
+          <i class="fas fa-redo-alt mr-2"></i> Reset
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let startBtn = document.getElementById("start");
+      let stopBtn = document.getElementById("stop");
+      let resetBtn = document.getElementById("reset");
+      let display = document.getElementById("display");
+
+      let intervalStarted = null;
+      let hours = 0;
+      let minutes = 0;
+      let seconds = 0;
+      let milliseconds = 0;
+
+      function WatchStarted() {
+        StopWatch(); // Prevent multiple intervals
+        intervalStarted = setInterval(() => {
+          milliseconds += 10;
+
+          if (milliseconds === 1000) {
+            milliseconds = 0;
+            seconds++;
+          }
+
+          if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+          }
+
+          if (minutes === 60) {
+            minutes = 0;
+            hours++;
+          }
+
+          let formattedMilliseconds = String(milliseconds).padStart(3, "0");
+          let formattedSeconds = String(seconds).padStart(2, "0");
+          let formattedMinutes = String(minutes).padStart(2, "0");
+          let formattedHours = String(hours).padStart(2, "0");
+
+          display.innerText = `${formattedHours} : ${formattedMinutes} : ${formattedSeconds} : ${formattedMilliseconds}`;
+        }, 10);
+      }
+
+      function StopWatch() {
+        clearInterval(intervalStarted);
+      }
+
+      startBtn.addEventListener("click", WatchStarted);
+      stopBtn.addEventListener("click", StopWatch);
+      resetBtn.addEventListener("click", () => {
+        StopWatch();
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        milliseconds = 0;
+        display.innerText = "00 : 00 : 00 : 000";
+      });
+    </script>
+  </body>
+</html>
