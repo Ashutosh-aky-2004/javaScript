@@ -17,6 +17,8 @@ Each project below represents a learning milestone — whether it’s mastering 
 | 🔐 Password Generator | Generates strong random passwords with custom settings. | [View Project](https://ashutosh-aky-2004.github.io/javaScript/password%20Generator) |
 | ⌚ Stop Watch         | A simple stopwatch with start, pause, and reset features. | [View Project](https://ashutosh-aky-2004.github.io/javaScript/stopWatch) |
 | ✅ Todo App           | A sleek to-do list app with checkbox and delete functionality. | [View Project](https://ashutosh-aky-2004.github.io/javaScript/Todo%20App/) |
+| ✅ Expense Tracker App | A stylish expense tracker with income/expense summary, theme toggle, and localStorage support. | [View Project](https://ashutosh-aky-2004.github.io/javaScript/Expense%20Tracker/) |
+
 
 ---
 
